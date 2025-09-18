@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Ingredients ni zipi</string>
+    <string name="title_activity_main">Ingredients ni zipi</string>
+    <string name="package_name">com.ingredientsnizipi.app</string>
+    <string name="custom_url_scheme">com.ingredientsnizipi.app</string>
+</resources>

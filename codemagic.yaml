@@ -1,0 +1,32 @@
+# codemagic.yaml
+workflows:
+  android-app:
+    name: Android Build
+    environment:
+      node: 20
+      # Add your GOOGLE_API_KEY here if it's needed for the build process
+      # vars:
+      #   GOOGLE_API_KEY: "YOUR_API_KEY_HERE"
+    scripts:
+      - name: Install npm dependencies
+        script: |
+          npm install
+      - name: Build Next.js app
+        script: |
+          npm run build
+      - name: Sync Capacitor assets
+        script: |
+          npx cap sync android
+      - name: Build Android app
+        script: |
+          cd android
+          ./gradlew assembleDebug
+    artifacts:
+      - android/app/build/outputs/apk/debug/**/*.apk
+    publishing:
+      email:
+        recipients:
+          - you@example.com # Replace with your email
+        notify:
+          success: true
+          failure: true

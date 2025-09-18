@@ -1,0 +1,118 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-family-body), serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-headline), sans-serif;
+}
+
+@layer base {
+  :root {
+    --font-family-body: 'Alegreya';
+    --font-family-headline: 'Belleza';
+
+    --background: 30 100% 95%; /* Soft warm peach/apricot */
+    --foreground: 25 40% 20%; /* Deeper warm brown */
+
+    --card: 30 90% 97%; /* Very light warm card */
+    --card-foreground: 25 40% 20%;
+
+    --popover: 30 90% 97%;
+    --popover-foreground: 25 40% 20%;
+
+    --primary: 85 40% 55%; /* Softer, fresh herb green */
+    --primary-foreground: 85 25% 95%; /* Light text on primary green */
+
+    --secondary: 85 35% 70%; /* Lighter, softer green */
+    --secondary-foreground: 85 30% 20%; /* Darker text for lighter green */
+
+    --muted: 30 80% 92%; /* Lighter, less saturated warm peach */
+    --muted-foreground: 30 35% 55%; /* Darker muted text */
+
+    --accent: 25 85% 65%; /* Richer, appetizing orange/coral */
+    --accent-foreground: 25 50% 15%; /* Dark brown text on accent */
+
+    --destructive: 0 70% 55%; /* Red for warnings */
+    --destructive-foreground: 0 0% 98%; /* Light text on red */
+
+    --border: 30 60% 88%; /* Softer warm border */
+    --input: 30 85% 94%; /* Light warm input background */
+    --ring: 25 85% 65%; /* Accent color for focus rings */
+
+    --chart-1: 25 80% 60%; /* Accent Orange/Coral */
+    --chart-2: 85 50% 45%; /* Primary Green */
+    --chart-3: 40 70% 55%; /* Golden Yellow */
+    --chart-4: 10 75% 70%; /* Soft Red/Salmon */
+    --chart-5: 50 40% 50%; /* Olive/Earthy tone */
+    --radius: 0.5rem;
+
+    --sidebar-background: 30 100% 96%;
+    --sidebar-foreground: 25 40% 25%;
+    --sidebar-primary: 85 40% 55%;
+    --sidebar-primary-foreground: 85 25% 95%;
+    --sidebar-accent: 25 85% 65%;
+    --sidebar-accent-foreground: 25 50% 15%;
+    --sidebar-border: 30 60% 90%;
+    --sidebar-ring: 25 85% 65%;
+  }
+
+  .dark {
+    --background: 25 30% 18%; /* Deep, rich warm brown */
+    --foreground: 30 85% 90%; /* Off-white/light warm cream text */
+
+    --card: 25 30% 22%; /* Slightly lighter dark brown card */
+    --card-foreground: 30 85% 90%;
+
+    --popover: 25 30% 22%;
+    --popover-foreground: 30 85% 90%;
+
+    --primary: 85 35% 60%; /* Green, slightly brighter for dark mode */
+    --primary-foreground: 85 20% 96%;
+
+    --secondary: 85 30% 50%; /* Darker green for secondary */
+    --secondary-foreground: 85 20% 92%;
+
+    --muted: 25 30% 25%; /* Darker muted brown */
+    --muted-foreground: 30 55% 70%; /* Lighter muted text */
+
+    --accent: 25 75% 70%; /* Orange/Coral, adjusted for dark mode */
+    --accent-foreground: 25 45% 12%;
+
+    --destructive: 0 65% 55%; /* Darker red */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 25 30% 28%; /* Darker border */
+    --input: 25 30% 24%; /* Darker input background */
+    --ring: 25 75% 70%; /* Accent color focus rings for dark mode */
+
+    --chart-1: 25 75% 65%;
+    --chart-2: 85 35% 55%;
+    --chart-3: 40 60% 60%;
+    --chart-4: 10 70% 65%;
+    --chart-5: 50 35% 45%;
+
+    --sidebar-background: 25 30% 20%;
+    --sidebar-foreground: 30 85% 88%;
+    --sidebar-primary: 85 35% 60%;
+    --sidebar-primary-foreground: 85 20% 96%;
+    --sidebar-accent: 25 75% 70%;
+    --sidebar-accent-foreground: 25 45% 12%;
+    --sidebar-border: 25 30% 26%;
+    --sidebar-ring: 25 75% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
