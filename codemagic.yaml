@@ -14,6 +14,9 @@ workflows:
       - name: Build Next.js app
         script: |
           npm run build
+      - name: Add Android platform
+        script: |
+          npx cap add android
       - name: Sync Capacitor assets
         script: |
           npx cap sync android
